@@ -207,13 +207,13 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
   const put = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
 
   const items = [];
-  K.collections.forEach(c => c.items.forEach(it => items.push({ ...it, col: c, key: c.code.replace("SNJ ", "") + "-" + it.code,
-    t: `img/${c.id}/tayyor_${it.code}.jpg`, m: `img/${c.id}/mato_${it.code}.jpg`, s: `img/${c.id}/namuna.jpg` })));
+  K.collections.forEach(c => c.items.forEach(it => items.push({ ...it, col: c, key: c.id + "-" + it.code, name: c.code + "-" + it.code,
+    t: `img/${c.id}/tayyor_${it.code}.jpg`, m: `img/${c.id}/mato_${it.code}.jpg`, s: c.sheet ? `img/${c.id}/namuna.jpg` : null })));
   const byKey = Object.fromEntries(items.map(i => [i.key, i]));
   let lang = new URLSearchParams(location.search).get("lang") || get("kombo_lang", "uz");
   if (!T[lang]) lang = "uz";
   let color = "all";
-  let sel = get("kombo_sel", []).filter(k => byKey[k]);
+  let sel = get("kombo_sel2", []).filter(k => byKey[k]);
   const $ = id => document.getElementById(id);
   const L = () => T[lang];
   const li = (arr) => arr[lang === "ru" ? 1 : 0];
@@ -237,13 +237,13 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
     el.className = "card" + (sel.includes(it.key) ? " sel" : "");
     el.dataset.key = it.key;
     const ph = document.createElement("button");
-    ph.type = "button"; ph.className = "ph"; ph.setAttribute("aria-label", it.col.code + "-" + it.code);
+    ph.type = "button"; ph.className = "ph"; ph.setAttribute("aria-label", it.name);
     ph.innerHTML = `<img class="t" loading="lazy" decoding="async" alt="" src="${it.t}"><img class="m" loading="lazy" decoding="async" alt="" src="${it.m}">`;
     ph.onclick = () => openV(it.key, "t");
     const pk = document.createElement("button");
     pk.type = "button"; pk.className = "pick";
     pk.setAttribute("aria-pressed", String(sel.includes(it.key)));
-    pk.setAttribute("aria-label", it.key + " — " + (sel.includes(it.key) ? L().unpick : L().pick));
+    pk.setAttribute("aria-label", it.name + " — "+ (sel.includes(it.key) ? L().unpick : L().pick));
     pk.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3s-7.6-4.6-7.6-10.2A4.3 4.3 0 0 1 12 7.4a4.3 4.3 0 0 1 7.6 2.7c0 5.6-7.6 10.2-7.6 10.2Z"/></svg>';
     pk.onclick = () => toggle(it.key);
     const info = document.createElement("div");
@@ -269,7 +269,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
       h2.append(sp, li(c.name));
       const sb = document.createElement("button"); sb.type = "button"; sb.className = "sheetbtn"; sb.textContent = L().sheet;
       sb.onclick = () => openV(its[0].key, "s");
-      h.append(h2, sb);
+      h.append(h2); if (c.sheet) h.append(sb);
       const g = document.createElement("div"); g.className = "grid";
       its.forEach(it => g.append(card(it)));
       s.append(h, g); root.append(s);
@@ -279,26 +279,26 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
 
   function toggle(k) {
     sel = sel.includes(k) ? sel.filter(x => x !== k) : [...sel, k];
-    put("kombo_sel", sel);
+    put("kombo_sel2", sel);
     document.querySelectorAll(`.card[data-key="${k}"]`).forEach(el => {
       const on = sel.includes(k);
       el.classList.toggle("sel", on);
       const b = el.querySelector(".pick");
       b.setAttribute("aria-pressed", String(on));
-      b.setAttribute("aria-label", k + " — " + (on ? L().unpick : L().pick));
+      b.setAttribute("aria-label", byKey[k].name + " — "+ (on ? L().unpick : L().pick));
     });
     bar(); if ($("dlg").open) vpick();
   }
 
-  function codes() { return sel.map(k => "SNJ " + k).join(", "); }
+  function codes() { return sel.map(k => byKey[k].name).join(", "); }
   function bar() {
     $("bar").classList.toggle("on", sel.length > 0);
     $("cnt").textContent = L().n(sel.length);
     $("thumbs").innerHTML = "";
-    sel.forEach(k => { const i = document.createElement("img"); i.src = byKey[k].m; i.alt = k; $("thumbs").append(i); });
+    sel.forEach(k => { const i = document.createElement("img"); i.src = byKey[k].m; i.alt = byKey[k].name; $("thumbs").append(i); });
     $("tg").href = TG + "?text=" + encodeURIComponent(L().msg(codes()));
   }
-  $("clr").onclick = () => { const old = sel; sel = []; put("kombo_sel", sel); old.forEach(k => document.querySelectorAll(`.card[data-key="${k}"]`).forEach(el => { el.classList.remove("sel"); el.querySelector(".pick").setAttribute("aria-pressed", "false"); })); bar(); };
+  $("clr").onclick = () => { const old = sel; sel = []; put("kombo_sel2", sel); old.forEach(k => document.querySelectorAll(`.card[data-key="${k}"]`).forEach(el => { el.classList.remove("sel"); el.querySelector(".pick").setAttribute("aria-pressed", "false"); })); bar(); };
   $("ig").onclick = async () => {
     const m = L().msg(codes());
     let ok = false;
@@ -318,8 +318,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
     $("vtitle").innerHTML = "";
     $("vtitle").append(it.col.code + "-" + it.code);
     const sm = document.createElement("small"); sm.textContent = li(it.col.name) + " · " + li(it.d); $("vtitle").append(sm);
-    $("vimg").src = it[vv]; $("vimg").alt = it.key;
-    document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === vv)));
+    if (vv === "s" && !it.s) vv = "t";
+    $("vimg").src = it[vv]; $("vimg").alt = it.name;
+    document.querySelectorAll(".tabs button").forEach(b => { b.setAttribute("aria-pressed", String(b.dataset.v === vv)); if (b.dataset.v === "s") b.hidden = !it.s; });
     vpick();
   }
   function vpick() { const on = sel.includes(vk); $("vpick").textContent = on ? L().added : L().add; $("vpick").classList.toggle("on", on); }

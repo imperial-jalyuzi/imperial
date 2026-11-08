@@ -19,6 +19,10 @@
   "kok": [
    "Ko‘k va zangori",
    "Голубой и бирюза"
+  ],
+  "yashil": [
+   "Yashil",
+   "Зелёный"
   ]
  },
  "collections": [
@@ -1321,6 +1325,426 @@
      [
       "Oq, kakao",
       "Белый, какао"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "m1343",
+   "code": "M1343",
+   "name": [
+    "Oltin ornament",
+    "Золотой орнамент"
+   ],
+   "sheet": null,
+   "style": "room",
+   "items": [
+    [
+     "01",
+     "83a435d1",
+     "krem",
+     [
+      "Oltin-bej",
+      "Золотисто-бежевый"
+     ]
+    ],
+    [
+     "03",
+     "73f2c51f",
+     "kulrang",
+     [
+      "Kulrang, oltin ornament",
+      "Серый, золотой орнамент"
+     ]
+    ],
+    [
+     "5",
+     "685754ba",
+     "kok",
+     [
+      "Zangori-krem",
+      "Бирюзово-кремовый"
+     ]
+    ],
+    [
+     "09",
+     "fad757c8",
+     "kulrang",
+     [
+      "Kumush-kulrang",
+      "Серебристо-серый"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "m1344",
+   "code": "M1344",
+   "name": [
+    "Medalyon",
+    "Медальон"
+   ],
+   "sheet": null,
+   "style": "room",
+   "items": [
+    [
+     "01",
+     "71b23076",
+     "kulrang",
+     [
+      "Kulrang, grafit naqsh",
+      "Серый, графитовый узор"
+     ]
+    ],
+    [
+     "02",
+     "ef8f2713",
+     "oq",
+     [
+      "Sutrang, oltin",
+      "Молочный, золото"
+     ]
+    ],
+    [
+     "06",
+     "dd51324b",
+     "jigarrang",
+     [
+      "Bej, qo‘ng‘ir naqsh",
+      "Беж, коричневый узор"
+     ]
+    ],
+    [
+     "09",
+     "4ecaa103",
+     "kulrang",
+     [
+      "Och kulrang",
+      "Светло-серый"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "m1345",
+   "code": "M1345",
+   "name": [
+    "Lola chizig‘i",
+    "Тюльпан-лоза"
+   ],
+   "sheet": null,
+   "style": "room",
+   "items": [
+    [
+     "02",
+     "e7e1baab",
+     "krem",
+     [
+      "Krem-oltin",
+      "Крем-золото"
+     ]
+    ],
+    [
+     "05",
+     "b894612b",
+     "kok",
+     [
+      "Zangori",
+      "Бирюзовый"
+     ]
+    ],
+    [
+     "06",
+     "8711d90c",
+     "kulrang",
+     [
+      "Kumush-kulrang",
+      "Серебристо-серый"
+     ]
+    ],
+    [
+     "08",
+     "a7238e71",
+     "krem",
+     [
+      "Sutrang-oltin",
+      "Молочно-золотой"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "m1346",
+   "code": "M1346",
+   "name": [
+    "Yaproqlar",
+    "Листопад"
+   ],
+   "sheet": null,
+   "style": "room",
+   "items": [
+    [
+     "01",
+     "be1f32eb",
+     "krem",
+     [
+      "Bej-oltin barglar",
+      "Бежево-золотые листья"
+     ]
+    ],
+    [
+     "02",
+     "ed16e348",
+     "kulrang",
+     [
+      "Kulrang barglar",
+      "Серые листья"
+     ]
+    ],
+    [
+     "03",
+     "6362e9dc",
+     "yashil",
+     [
+      "Yashil barglar",
+      "Зелёные листья"
+     ]
+    ],
+    [
+     "04",
+     "38e9626a",
+     "jigarrang",
+     [
+      "Qo‘ng‘ir barglar",
+      "Коричневые листья"
+     ]
+    ],
+    [
+     "06",
+     "783bc6a2",
+     "kok",
+     [
+      "Zangori-krem barglar",
+      "Бирюзово-кремовые листья"
+     ]
+    ],
+    [
+     "07",
+     "8af0bfa6",
+     "kok",
+     [
+      "Ko‘k barglar",
+      "Синие листья"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "m1348",
+   "code": "M1348",
+   "name": [
+    "Gulchambar to‘lqin",
+    "Цветочная волна"
+   ],
+   "sheet": null,
+   "style": "room",
+   "items": [
+    [
+     "02",
+     "102d7f3a",
+     "kulrang",
+     [
+      "Kulrang, oltin gullar",
+      "Серый, золотые цветы"
+     ]
+    ],
+    [
+     "04",
+     "3c006145",
+     "jigarrang",
+     [
+      "Krem, qo‘ng‘ir to‘lqin",
+      "Крем, коричневая волна"
+     ]
+    ],
+    [
+     "08",
+     "ed6f00aa",
+     "kulrang",
+     [
+      "Kumush-kulrang",
+      "Серебристо-серый"
+     ]
+    ],
+    [
+     "09",
+     "6404cfa9",
+     "kok",
+     [
+      "Yalpiz-zangori",
+      "Мятно-бирюзовый"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "m1349",
+   "code": "M1349",
+   "name": [
+    "Pat",
+    "Перо"
+   ],
+   "sheet": null,
+   "style": "room",
+   "items": [
+    [
+     "01",
+     "3bf3d99e",
+     "krem",
+     [
+      "Krem-oltin",
+      "Крем-золото"
+     ]
+    ],
+    [
+     "02",
+     "ef5bf551",
+     "kulrang",
+     [
+      "Kulrang, oltin pat",
+      "Серый, золотое перо"
+     ]
+    ],
+    [
+     "03",
+     "3e3b0fe5",
+     "kulrang",
+     [
+      "Kumush pat",
+      "Серебряное перо"
+     ]
+    ],
+    [
+     "05",
+     "e5ce7fc0",
+     "kok",
+     [
+      "Ko‘k, oltin pat",
+      "Синий, золотое перо"
+     ]
+    ],
+    [
+     "06",
+     "d9bd488a",
+     "kok",
+     [
+      "Ko‘k-kulrang pat",
+      "Сине-серое перо"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "m1352",
+   "code": "M1352",
+   "name": [
+    "Hoshiya",
+    "Бордюр"
+   ],
+   "sheet": null,
+   "style": "room",
+   "items": [
+    [
+     "01",
+     "3cec2843",
+     "krem",
+     [
+      "Krem-oltin hoshiya",
+      "Крем, золотой бордюр"
+     ]
+    ],
+    [
+     "02",
+     "c25565e9",
+     "kulrang",
+     [
+      "Kulrang hoshiya",
+      "Серый бордюр"
+     ]
+    ],
+    [
+     "04",
+     "0f1ffa7f",
+     "jigarrang",
+     [
+      "Bej-qo‘ng‘ir hoshiya",
+      "Беж-коричневый бордюр"
+     ]
+    ],
+    [
+     "06",
+     "4cfdf878",
+     "kok",
+     [
+      "Zangori hoshiya",
+      "Бирюзовый бордюр"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "m1355",
+   "code": "M1355",
+   "name": [
+    "Saroy damask",
+    "Дворцовый дамаск"
+   ],
+   "sheet": null,
+   "style": "room",
+   "items": [
+    [
+     "01",
+     "b5429be9",
+     "krem",
+     [
+      "Krem-oltin damask",
+      "Крем-золотой дамаск"
+     ]
+    ],
+    [
+     "02",
+     "eff669e3",
+     "kulrang",
+     [
+      "Kulrang damask",
+      "Серый дамаск"
+     ]
+    ],
+    [
+     "03",
+     "afc4a6be",
+     "jigarrang",
+     [
+      "Qo‘ng‘ir damask",
+      "Коричневый дамаск"
+     ]
+    ],
+    [
+     "05",
+     "0cfc41fa",
+     "kok",
+     [
+      "Ko‘k-kulrang damask",
+      "Сине-серый дамаск"
+     ]
+    ],
+    [
+     "06",
+     "b3030eea",
+     "kulrang",
+     [
+      "Qora-oq damask",
+      "Чёрно-белый дамаск"
      ]
     ]
    ]
