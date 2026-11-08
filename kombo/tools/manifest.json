@@ -1748,6 +1748,246 @@
      ]
     ]
    ]
+  },
+  {
+   "id": "m1356",
+   "code": "M1356",
+   "name": [
+    "Lotus",
+    "Лотос"
+   ],
+   "sheet": null,
+   "style": "room",
+   "items": [
+    [
+     "01",
+     "38d15a0e",
+     "krem",
+     [
+      "Krem-oltin",
+      "Крем-золото"
+     ]
+    ],
+    [
+     "02",
+     "60542a1b",
+     "kulrang",
+     [
+      "Kulrang, oltin",
+      "Серый, золото"
+     ]
+    ],
+    [
+     "03",
+     "ce97dfe7",
+     "jigarrang",
+     [
+      "Qo‘ng‘ir lotus",
+      "Коричневый лотос"
+     ]
+    ],
+    [
+     "04",
+     "bdadf18e",
+     "kok",
+     [
+      "Yalpiz-zangori",
+      "Мятно-бирюзовый"
+     ]
+    ],
+    [
+     "05",
+     "fd4e9237",
+     "kok",
+     [
+      "To‘q ko‘k lotus",
+      "Тёмно-синий лотос"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "m1357",
+   "code": "M1357",
+   "name": [
+    "Jingalak damask",
+    "Дамаск с завитками"
+   ],
+   "sheet": null,
+   "style": "room",
+   "items": [
+    [
+     "01",
+     "e91fbe4a",
+     "krem",
+     [
+      "Krem-oltin",
+      "Крем-золото"
+     ]
+    ],
+    [
+     "02",
+     "9a1725d5",
+     "kulrang",
+     [
+      "Kulrang, oltin",
+      "Серый, золото"
+     ]
+    ],
+    [
+     "03",
+     "a5652099",
+     "jigarrang",
+     [
+      "Qo‘ng‘ir-oltin",
+      "Коричнево-золотой"
+     ]
+    ],
+    [
+     "04",
+     "916280b0",
+     "kok",
+     [
+      "Yalpiz-zangori",
+      "Мятно-бирюзовый"
+     ]
+    ],
+    [
+     "07",
+     "dc56a622",
+     "kok",
+     [
+      "To‘q ko‘k",
+      "Тёмно-синий"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "m1358",
+   "code": "M1358",
+   "name": [
+    "Akant bargi",
+    "Акант"
+   ],
+   "sheet": null,
+   "style": "room",
+   "items": [
+    [
+     "01",
+     "5020e00e",
+     "krem",
+     [
+      "Krem-oltin",
+      "Крем-золото"
+     ]
+    ],
+    [
+     "02",
+     "185ca8f0",
+     "kulrang",
+     [
+      "Kulrang akant",
+      "Серый акант"
+     ]
+    ],
+    [
+     "03",
+     "57d176f3",
+     "jigarrang",
+     [
+      "Qo‘ng‘ir akant",
+      "Коричневый акант"
+     ]
+    ],
+    [
+     "06",
+     "d010970a",
+     "kok",
+     [
+      "To‘q ko‘k akant",
+      "Тёмно-синий акант"
+     ]
+    ],
+    [
+     "07",
+     "99f9fe25",
+     "kok",
+     [
+      "Zangori akant",
+      "Бирюзовый акант"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "m1359",
+   "code": "M1359",
+   "name": [
+    "Klassik damask",
+    "Классический дамаск"
+   ],
+   "sheet": null,
+   "style": "room",
+   "items": [
+    [
+     "01",
+     "1726b753",
+     "krem",
+     [
+      "Krem-oltin",
+      "Крем-золото"
+     ]
+    ],
+    [
+     "03",
+     "55c7cfc5",
+     "jigarrang",
+     [
+      "Qo‘ng‘ir damask",
+      "Коричневый дамаск"
+     ]
+    ],
+    [
+     "04",
+     "1b498acb",
+     "kulrang",
+     [
+      "Kulrang damask",
+      "Серый дамаск"
+     ]
+    ],
+    [
+     "08",
+     "6b2943a5",
+     "kulrang",
+     [
+      "Qora-oq damask",
+      "Чёрно-белый дамаск"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "m1361",
+   "code": "M1361",
+   "name": [
+    "Saroy medalyoni",
+    "Дворцовый медальон"
+   ],
+   "sheet": null,
+   "style": "room",
+   "items": [
+    [
+     "01",
+     "fcfa25d4",
+     "krem",
+     [
+      "Krem-oltin",
+      "Крем-золото"
+     ]
+    ]
+   ]
   }
  ]
 }
