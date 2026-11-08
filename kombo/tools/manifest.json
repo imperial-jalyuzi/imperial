@@ -35,6 +35,10 @@
   "qora": [
    "Qora",
    "Чёрный"
+  ],
+  "qizil": [
+   "Qizil",
+   "Красный"
   ]
  },
  "collections": [
@@ -186,6 +190,260 @@
     ]
    ],
    "sep": " "
+  },
+  {
+   "id": "mh31",
+   "code": "MH31",
+   "name": [
+    "Bambuk to‘qima",
+    "Бамбуковая фактура"
+   ],
+   "sheet": "77ade329",
+   "style": "swatch",
+   "group": "hamyonbop",
+   "sep": "-",
+   "items": [
+    [
+     "01",
+     "13ce2e58",
+     "qizil",
+     [
+      "Qizil",
+      "Красный"
+     ]
+    ],
+    [
+     "05",
+     "8f8840b6",
+     "krem",
+     [
+      "Qum rang",
+      "Песочный"
+     ]
+    ],
+    [
+     "06",
+     "2a0510ef",
+     "jigarrang",
+     [
+      "Bambuk, oltin-qo‘ng‘ir",
+      "Бамбук, золотисто-коричневый"
+     ]
+    ],
+    [
+     "07",
+     "e5cd4bf0",
+     "jigarrang",
+     [
+      "To‘q qo‘ng‘ir",
+      "Тёмно-коричневый"
+     ]
+    ],
+    [
+     "08",
+     "b6f02a18",
+     "kulrang",
+     [
+      "Kulrang, yarim shaffof",
+      "Серый, полупрозрачный"
+     ]
+    ],
+    [
+     "11",
+     "f97ce3b7",
+     "kulrang",
+     [
+      "Grafit, bambuk",
+      "Графит, бамбук"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "s2001",
+   "code": "2001",
+   "name": [
+    "Sutli chiziq",
+    "Молочная полоса"
+   ],
+   "sheet": "1b57e179",
+   "style": "swatch",
+   "group": "hamyonbop",
+   "sep": "-",
+   "items": [
+    [
+     "01",
+     "49573ba7",
+     "oq",
+     [
+      "Oq-kulrang",
+      "Бело-серый"
+     ]
+    ],
+    [
+     "02",
+     "5161f6b6",
+     "krem",
+     [
+      "Bej, ip to‘qima",
+      "Беж, нитевая фактура"
+     ]
+    ],
+    [
+     "03",
+     "8ce875bc",
+     "jigarrang",
+     [
+      "Kakao",
+      "Какао"
+     ]
+    ],
+    [
+     "04",
+     "22af9ad7",
+     "kok",
+     [
+      "Ko‘k",
+      "Синий"
+     ]
+    ],
+    [
+     "05",
+     "b878bdf7",
+     "kulrang",
+     [
+      "Och kulrang",
+      "Светло-серый"
+     ]
+    ],
+    [
+     "06",
+     "b307ecfe",
+     "kulrang",
+     [
+      "Kulrang",
+      "Серый"
+     ]
+    ],
+    [
+     "07",
+     "f6a2a994",
+     "kulrang",
+     [
+      "Grafit chiziq",
+      "Графитовая полоса"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "s1503",
+   "code": "1503",
+   "name": [
+    "Gradient chiziq",
+    "Градиентная полоса"
+   ],
+   "sheet": "aac76287",
+   "style": "swatch",
+   "group": "hamyonbop",
+   "sep": "-",
+   "items": [
+    [
+     "01",
+     "38bd6dcc",
+     "krem",
+     [
+      "Bej-oltin chiziqlar",
+      "Бежево-золотые полосы"
+     ]
+    ],
+    [
+     "02",
+     "6ddb3a41",
+     "jigarrang",
+     [
+      "Oltin-qo‘ng‘ir chiziqlar",
+      "Золотисто-коричневые полосы"
+     ]
+    ],
+    [
+     "03",
+     "99d4d253",
+     "qora",
+     [
+      "Qora-oq chiziqlar",
+      "Чёрно-белые полосы"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "a19",
+   "code": "A19",
+   "name": [
+    "Hoshiyali",
+    "С окантовкой"
+   ],
+   "sheet": "f34e921c",
+   "style": "swatch",
+   "group": "hamyonbop",
+   "sep": "-",
+   "items": [
+    [
+     "1",
+     "9675c343",
+     "oq",
+     [
+      "Oq",
+      "Белый"
+     ]
+    ],
+    [
+     "3",
+     "ad6b7fc9",
+     "kulrang",
+     [
+      "Och kulrang",
+      "Светло-серый"
+     ]
+    ],
+    [
+     "4",
+     "ffbd2444",
+     "krem",
+     [
+      "Oltin-qum",
+      "Золотисто-песочный"
+     ]
+    ],
+    [
+     "5",
+     "ea6733f2",
+     "jigarrang",
+     [
+      "Qo‘ng‘ir",
+      "Коричневый"
+     ]
+    ],
+    [
+     "6",
+     "d5f6cf6d",
+     "kulrang",
+     [
+      "Grafit",
+      "Графит"
+     ]
+    ],
+    [
+     "7",
+     "14dc2c23",
+     "qora",
+     [
+      "Qora",
+      "Чёрный"
+     ]
+    ]
+   ]
   },
   {
    "id": "snj5367",
