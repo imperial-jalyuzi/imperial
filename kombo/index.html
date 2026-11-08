@@ -40,6 +40,11 @@ h1 em { color: var(--gold); }
 .chip i { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); }
 .chip[aria-pressed="true"] { border-color: var(--gold); background: rgba(214,176,98,.12); color: var(--gold-hi); }
 .col { margin-top: 26px; }
+.ghead { margin: 44px 0 0; display: flex; align-items: baseline; gap: 12px; }
+.ghead:first-child { margin-top: 8px; }
+.ghead h2 { margin: 0; font-family: Caladea, Georgia, serif; font-weight: 400; font-size: 32px; color: var(--gold-hi); }
+.ghead span { font-size: 12.5px; color: var(--muted); }
+.chip.g { font-weight: 500; }
 .colhead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line2); padding-top: 16px; margin-bottom: 14px; }
 .colhead h2 { margin: 0; font-family: Caladea, Georgia, serif; font-weight: 400; font-size: 26px; }
 .colhead h2 span { display: block; font-family: Inter, sans-serif; font-size: 11px; letter-spacing: .2em; color: var(--muted); margin-bottom: 4px; }
@@ -124,7 +129,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
     </ul>
   </header>
 
-  <div class="filters"><div class="chips" id="chips" role="group" aria-label="Rang"></div></div>
+  <div class="filters"><div class="chips" id="groups" role="group" aria-label="Uslub"></div><div class="chips" id="chips" role="group" aria-label="Rang" style="margin-top:8px"></div></div>
   <main id="list"></main>
 
   <section class="facts">
@@ -172,7 +177,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
       h1: "Matoni tanlang —<br><em>derazangizga o‘lchab tikamiz</em>",
       lead: "Har bir mato tayyor jalyuzi ko‘rinishida. Yoqqanini ♡ bilan belgilang va bizga yuboring — o‘lchovga kelib, aniq narxini aytamiz.",
       s1: "Rangni tanlang", s2: "Yoqqanini ♡ belgilang", s3: "Telegram yoki Direktga yuboring",
-      all: "Hammasi", sheet: "Namunalar", clear: "Tozalash",
+      all: "Barcha ranglar", allg: "Hammasi", pcs: "ta mato", sheet: "Namunalar", clear: "Tozalash",
       tg: "Telegram’da yuborish", ig: "Direktga yozish",
       v_t: "Tayyor ko‘rinish", v_m: "Mato yaqindan", v_s: "Kolleksiya",
       add: "♡ Tanlash", added: "✓ Tanlandi", n: n => n + " ta tanlandi", none: "Bu rangda mato yo‘q.",
@@ -189,7 +194,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
       h1: "Выберите ткань —<br><em>сошьём по размеру окна</em>",
       lead: "Каждая ткань — в виде готовых жалюзи. Отметьте понравившиеся ♡ и отправьте нам: приедем на замер и назовём точную цену.",
       s1: "Выберите цвет", s2: "Отметьте ♡", s3: "Отправьте в Telegram или Директ",
-      all: "Все", sheet: "Образцы", clear: "Очистить",
+      all: "Все цвета", allg: "Все", pcs: "тканей", sheet: "Образцы", clear: "Очистить",
       tg: "Отправить в Telegram", ig: "Написать в Директ",
       v_t: "Готовый вид", v_m: "Ткань крупно", v_s: "Коллекция",
       add: "♡ Выбрать", added: "✓ Выбрано", n: n => "Выбрано: " + n, none: "Тканей такого цвета нет.",
@@ -212,7 +217,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
   const byKey = Object.fromEntries(items.map(i => [i.key, i]));
   let lang = new URLSearchParams(location.search).get("lang") || get("kombo_lang", "uz");
   if (!T[lang]) lang = "uz";
-  let color = "all";
+  let color = "all", group = "all";
   let sel = get("kombo_sel2", []).filter(k => byKey[k]);
   const $ = id => document.getElementById(id);
   const L = () => T[lang];
@@ -225,10 +230,24 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
       const b = document.createElement("button");
       b.type = "button"; b.className = "chip"; b.setAttribute("aria-pressed", String(c === color));
       if (c !== "all") { const i = document.createElement("i"); i.style.background = SW[c]; b.append(i); }
-      const n = c === "all" ? items.length : items.filter(x => x.tag === c).length;
+      const pool = items.filter(x => group === "all" || x.col.group === group);
+      const n = c === "all" ? pool.length : pool.filter(x => x.tag === c).length;
+      if (n === 0 && c !== color) return;
       b.append((c === "all" ? L().all : li(K.colors[c])) + " · " + n);
       b.onclick = () => { color = c; chips(); list(); };
       $("chips").append(b);
+    });
+  }
+
+  function groups() {
+    $("groups").innerHTML = "";
+    ["all", ...Object.keys(K.groups)].forEach(g => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "chip g"; b.setAttribute("aria-pressed", String(g === group));
+      const n = g === "all" ? items.length : items.filter(x => x.col.group === g).length;
+      b.textContent = (g === "all" ? L().allg : li(K.groups[g])) + " · " + n;
+      b.onclick = () => { group = g; color = "all"; groups(); chips(); list(); window.scrollTo({ top: $("groups").getBoundingClientRect().top + scrollY - 12 }); };
+      $("groups").append(b);
     });
   }
 
@@ -257,11 +276,20 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
 
   function list() {
     const root = $("list"); root.innerHTML = "";
-    let any = false;
+    let any = false, lastG = null;
     K.collections.forEach(c => {
+      if (group !== "all" && c.group !== group) return;
       const its = items.filter(i => i.col === c && (color === "all" || i.tag === color));
       if (!its.length) return;
       any = true;
+      if (c.group !== lastG) {
+        lastG = c.group;
+        const gh = document.createElement("div"); gh.className = "ghead";
+        const t = document.createElement("h2"); t.textContent = li(K.groups[c.group]);
+        const nn = document.createElement("span");
+        nn.textContent = items.filter(i => i.col.group === c.group && (color === "all" || i.tag === color)).length + " " + L().pcs;
+        gh.append(t, nn); root.append(gh);
+      }
       const s = document.createElement("section"); s.className = "col";
       const h = document.createElement("div"); h.className = "colhead";
       const h2 = document.createElement("h2");
@@ -311,7 +339,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
 
   // viewer
   let vk = null, vv = "t";
-  function visible() { return items.filter(i => color === "all" || i.tag === color); }
+  function visible() { return items.filter(i => (group === "all" || i.col.group === group) && (color === "all" || i.tag === color)); }
   function openV(k, v) { vk = k; vv = v; render(); if (!$("dlg").open) $("dlg").showModal(); }
   function render() {
     const it = byKey[vk];
@@ -342,7 +370,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
     document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === l)));
     document.querySelectorAll("[data-t]").forEach(el => { const v = L()[el.dataset.t]; if (typeof v === "string") el.textContent = v; });
     document.querySelectorAll("[data-t-html]").forEach(el => { el.innerHTML = L()[el.dataset.tHtml]; });
-    chips(); list(); bar(); if ($("dlg").open) render();
+    groups(); chips(); list(); bar(); if ($("dlg").open) render();
   }
   document.querySelectorAll(".lang button").forEach(b => b.onclick = () => setLang(b.dataset.lang));
   setLang(lang);
