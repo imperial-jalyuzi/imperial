@@ -58,6 +58,8 @@ h1 em { color: var(--gold); }
 .card .ph { position: relative; display: block; width: 100%; border: 0; padding: 0; background: #222; cursor: zoom-in; aspect-ratio: 4 / 5; }
 .card .ph img.t { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block; }
 .card .ph img.m { position: absolute; left: 8px; bottom: 8px; width: 34%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 2px solid var(--bg); box-shadow: 0 4px 14px rgba(0,0,0,.45); }
+.card .sim { position: absolute; left: 8px; top: 8px; background: rgba(20,19,17,.72); color: var(--soft); font-size: 11px; padding: 4px 8px; border-radius: 999px; }
+.vnote { margin: 0; text-align: center; font-size: 12.5px; color: var(--muted); margin: 0; }
 .card .info { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 3px; flex: 1; }
 .card .code { font-weight: 600; font-size: 14px; letter-spacing: .02em; }
 .card .d { font-size: 12.5px; color: var(--muted); line-height: 1.35; }
@@ -158,6 +160,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
       <button type="button" data-v="m" aria-pressed="false" data-t="v_m">Mato yaqindan</button>
       <button type="button" data-v="s" aria-pressed="false" data-t="v_s">Kolleksiya</button>
     </div>
+    <p class="vnote" id="vnote" hidden></p>
     <div class="img"><img id="vimg" alt=""><button type="button" class="nav p" id="vprev" aria-label="Oldingi">‹</button><button type="button" class="nav n" id="vnext" aria-label="Keyingi">›</button></div>
     <button type="button" class="vpick" id="vpick"></button>
   </div>
@@ -180,6 +183,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
       all: "Barcha ranglar", allg: "Hammasi", pcs: "ta mato", sheet: "Namunalar", clear: "Tozalash",
       tg: "Telegram’da yuborish", ig: "Direktga yozish",
       v_t: "Tayyor ko‘rinish", v_m: "Mato yaqindan", v_s: "Kolleksiya",
+      sim: "Taxminiy ko‘rinish", simnote: "Kompyuterda chizilgan: rang va to‘qima haqiqiy namunadan olingan. Asl namunani o‘lchovchi olib keladi.",
       add: "♡ Tanlash", added: "✓ Tanlandi", n: n => n + " ta tanlandi", none: "Bu rangda mato yo‘q.",
       f1: "Toshkent shahrida o‘lchov, yetkazish va o‘rnatish — bepul.",
       f2: "O‘lchovdan keyin 3 kunda tayyor · 1 yil kafolat · Click, Payme, karta yoki naqd.",
@@ -197,6 +201,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
       all: "Все цвета", allg: "Все", pcs: "тканей", sheet: "Образцы", clear: "Очистить",
       tg: "Отправить в Telegram", ig: "Написать в Директ",
       v_t: "Готовый вид", v_m: "Ткань крупно", v_s: "Коллекция",
+      sim: "Примерный вид", simnote: "Нарисовано на компьютере по фото настоящего образца. Замерщик привезёт оригинал.",
       add: "♡ Выбрать", added: "✓ Выбрано", n: n => "Выбрано: " + n, none: "Тканей такого цвета нет.",
       f1: "По Ташкенту замер, доставка и установка — бесплатно.",
       f2: "Готово через 3 дня после замера · гарантия 1 год · Click, Payme, карта или наличные.",
@@ -212,7 +217,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
   const put = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
 
   const items = [];
-  K.collections.forEach(c => c.items.forEach(it => items.push({ ...it, col: c, key: c.id + "-" + it.code, name: c.code + "-" + it.code,
+  K.collections.forEach(c => c.items.forEach(it => items.push({ ...it, col: c, key: c.id + "-" + it.code, name: c.code + c.sep + it.code,
     t: `img/${c.id}/tayyor_${it.code}.jpg`, m: `img/${c.id}/mato_${it.code}.jpg`, s: c.sheet ? `img/${c.id}/namuna.jpg` : null })));
   const byKey = Object.fromEntries(items.map(i => [i.key, i]));
   let lang = new URLSearchParams(location.search).get("lang") || get("kombo_lang", "uz");
@@ -267,9 +272,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
     pk.onclick = () => toggle(it.key);
     const info = document.createElement("div");
     info.className = "info";
-    const code = document.createElement("span"); code.className = "code"; code.textContent = it.col.code + "-" + it.code;
+    const code = document.createElement("span"); code.className = "code"; code.textContent = it.name;
     const d = document.createElement("span"); d.className = "d"; d.textContent = li(it.d);
     info.append(code, d);
+    if (it.sim) { const s = document.createElement("span"); s.className = "sim"; s.textContent = L().sim; ph.append(s); }
     el.append(ph, pk, info);
     return el;
   }
@@ -344,11 +350,14 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outli
   function render() {
     const it = byKey[vk];
     $("vtitle").innerHTML = "";
-    $("vtitle").append(it.col.code + "-" + it.code);
+    $("vtitle").append(it.name);
     const sm = document.createElement("small"); sm.textContent = li(it.col.name) + " · " + li(it.d); $("vtitle").append(sm);
     if (vv === "s" && !it.s) vv = "t";
     $("vimg").src = it[vv]; $("vimg").alt = it.name;
     document.querySelectorAll(".tabs button").forEach(b => { b.setAttribute("aria-pressed", String(b.dataset.v === vv)); if (b.dataset.v === "s") b.hidden = !it.s; });
+    $("vnote").hidden = !(it.sim && vv === "t");
+    $("vnote").textContent = L().simnote;
+    document.querySelector('.tabs [data-v="t"]').textContent = it.sim ? L().sim : L().v_t;
     vpick();
   }
   function vpick() { const on = sel.includes(vk); $("vpick").textContent = on ? L().added : L().add; $("vpick").classList.toggle("on", on); }
