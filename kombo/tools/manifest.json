@@ -1,0 +1,973 @@
+{
+ "colors": {
+  "oq": [
+   "Oq",
+   "Белый"
+  ],
+  "krem": [
+   "Krem va bej",
+   "Крем и беж"
+  ],
+  "kulrang": [
+   "Kulrang",
+   "Серый"
+  ],
+  "jigarrang": [
+   "Jigarrang",
+   "Коричневый"
+  ],
+  "kok": [
+   "Ko‘k va zangori",
+   "Голубой и бирюза"
+  ]
+ },
+ "collections": [
+  {
+   "id": "snj5690",
+   "code": "SNJ 5690",
+   "name": [
+    "Barglar",
+    "Листья"
+   ],
+   "sheet": "d3b4aa5b",
+   "items": [
+    [
+     "102",
+     "f3865571",
+     "oq",
+     [
+      "Oq, oltin barglar",
+      "Белый, золотые листья"
+     ]
+    ],
+    [
+     "105",
+     "589c51e2",
+     "kulrang",
+     [
+      "Kulrang, kumush barglar",
+      "Серый, серебристые листья"
+     ]
+    ],
+    [
+     "115",
+     "68c05765",
+     "krem",
+     [
+      "Krem, oltin-qo‘ng‘ir barglar",
+      "Крем, золотисто-коричневые листья"
+     ]
+    ],
+    [
+     "116",
+     "9ef8c693",
+     "kok",
+     [
+      "Krem, ko‘k-kulrang barglar",
+      "Крем, сине-серые листья"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5716",
+   "code": "SNJ 5716",
+   "name": [
+    "Naqsh",
+    "Узор"
+   ],
+   "sheet": "c99b9407",
+   "items": [
+    [
+     "102",
+     "4e7f4d24",
+     "oq",
+     [
+      "Oq, oltin naqsh",
+      "Белый, золотой узор"
+     ]
+    ],
+    [
+     "104",
+     "6ba10d8b",
+     "jigarrang",
+     [
+      "Krem, qo‘ng‘ir naqsh",
+      "Крем, коричневый узор"
+     ]
+    ],
+    [
+     "107",
+     "af9a8b44",
+     "kulrang",
+     [
+      "Kulrang, kumush naqsh",
+      "Серый, серебристый узор"
+     ]
+    ],
+    [
+     "114",
+     "f2c81a31",
+     "kok",
+     [
+      "Zangori, oltin naqsh",
+      "Бирюза, золотой узор"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5776",
+   "code": "SNJ 5776",
+   "name": [
+    "Marmar",
+    "Мрамор"
+   ],
+   "sheet": "32deafad",
+   "items": [
+    [
+     "105",
+     "57f19225",
+     "kulrang",
+     [
+      "Kulrang, kumush chiziqlar",
+      "Серый, серебристые линии"
+     ]
+    ],
+    [
+     "106",
+     "61ea260e",
+     "kulrang",
+     [
+      "Kulrang, oltin chiziqlar",
+      "Серый, золотые линии"
+     ]
+    ],
+    [
+     "108",
+     "82143d91",
+     "krem",
+     [
+      "Krem, oltin chiziqlar",
+      "Крем, золотые линии"
+     ]
+    ],
+    [
+     "110",
+     "086bd841",
+     "kok",
+     [
+      "Krem, ko‘k-kulrang",
+      "Крем, сине-серый"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5777",
+   "code": "SNJ 5777",
+   "name": [
+    "Romb",
+    "Ромб"
+   ],
+   "sheet": "2261dbd8",
+   "items": [
+    [
+     "105",
+     "e8d4f960",
+     "kulrang",
+     [
+      "Kulrang romb",
+      "Серый ромб"
+     ]
+    ],
+    [
+     "108",
+     "d4e56da0",
+     "krem",
+     [
+      "Krem, oltin-qo‘ng‘ir romb",
+      "Крем, золотисто-коричневый ромб"
+     ]
+    ],
+    [
+     "110",
+     "83cd8704",
+     "kok",
+     [
+      "Krem, ko‘k romb",
+      "Крем, синий ромб"
+     ]
+    ],
+    [
+     "112",
+     "c7e513b1",
+     "kok",
+     [
+      "Krem, zangori romb",
+      "Крем, бирюзовый ромб"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5812",
+   "code": "SNJ 5812",
+   "name": [
+    "Panjara",
+    "Решётка"
+   ],
+   "sheet": "23a1ec99",
+   "items": [
+    [
+     "104",
+     "4f5063f6",
+     "krem",
+     [
+      "Krem, oltin panjara",
+      "Крем, золотая решётка"
+     ]
+    ],
+    [
+     "105",
+     "a4cdb3b3",
+     "kulrang",
+     [
+      "Kulrang panjara",
+      "Серая решётка"
+     ]
+    ],
+    [
+     "108",
+     "883af7e8",
+     "jigarrang",
+     [
+      "Krem, qo‘ng‘ir panjara",
+      "Крем, коричневая решётка"
+     ]
+    ],
+    [
+     "110",
+     "e0df5f1a",
+     "kok",
+     [
+      "Ko‘k-kulrang panjara",
+      "Сине-серая решётка"
+     ]
+    ],
+    [
+     "112",
+     "818a1a21",
+     "kok",
+     [
+      "Zangori, oltin panjara",
+      "Бирюза, золотая решётка"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5810",
+   "code": "SNJ 5810",
+   "name": [
+    "Geometriya",
+    "Геометрия"
+   ],
+   "sheet": "aa5acb15",
+   "items": [
+    [
+     "105",
+     "07a803fb",
+     "kulrang",
+     [
+      "Kumush-kulrang",
+      "Серебристо-серый"
+     ]
+    ],
+    [
+     "108",
+     "edb2f517",
+     "krem",
+     [
+      "Krem, oltin-qo‘ng‘ir",
+      "Крем, золотисто-коричневый"
+     ]
+    ],
+    [
+     "110",
+     "fb8435ba",
+     "kok",
+     [
+      "Krem, ko‘k-kulrang",
+      "Крем, сине-серый"
+     ]
+    ],
+    [
+     "112",
+     "140ebea9",
+     "kok",
+     [
+      "Krem, zangori",
+      "Крем, бирюзовый"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5666",
+   "code": "SNJ 5666",
+   "name": [
+    "Mozaika",
+    "Мозаика"
+   ],
+   "sheet": "9d878e8c",
+   "items": [
+    [
+     "102",
+     "5970d93b",
+     "oq",
+     [
+      "Oq mozaika",
+      "Белая мозаика"
+     ]
+    ],
+    [
+     "108",
+     "57c62b9b",
+     "kulrang",
+     [
+      "Kulrang mozaika",
+      "Серая мозаика"
+     ]
+    ],
+    [
+     "117",
+     "95b4b241",
+     "kulrang",
+     [
+      "To‘q kulrang mozaika",
+      "Тёмно-серая мозаика"
+     ]
+    ],
+    [
+     "126",
+     "e3db30f6",
+     "krem",
+     [
+      "Bej mozaika",
+      "Бежевая мозаика"
+     ]
+    ],
+    [
+     "132",
+     "2f874e64",
+     "jigarrang",
+     [
+      "Jigarrang-oltin mozaika",
+      "Коричнево-золотая мозаика"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5811",
+   "code": "SNJ 5811",
+   "name": [
+    "3D to‘lqin",
+    "3D волна"
+   ],
+   "sheet": "92edbbb5",
+   "items": [
+    [
+     "105",
+     "fd06238c",
+     "kulrang",
+     [
+      "Kumush-kulrang",
+      "Серебристо-серый"
+     ]
+    ],
+    [
+     "108",
+     "56938ada",
+     "jigarrang",
+     [
+      "Krem, oltin-qo‘ng‘ir",
+      "Крем, золотисто-коричневый"
+     ]
+    ],
+    [
+     "110",
+     "45cecb4b",
+     "kok",
+     [
+      "Ko‘k-kulrang",
+      "Сине-серый"
+     ]
+    ],
+    [
+     "112",
+     "c60d8991",
+     "kok",
+     [
+      "Zangori, oltin",
+      "Бирюза, золото"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5852",
+   "code": "SNJ 5852",
+   "name": [
+    "Mo‘yqalam",
+    "Мазки"
+   ],
+   "sheet": "a8abc311",
+   "items": [
+    [
+     "101",
+     "cf7b3ceb",
+     "oq",
+     [
+      "Oq, yengil naqsh",
+      "Белый, лёгкий узор"
+     ]
+    ],
+    [
+     "104",
+     "26e450a4",
+     "kulrang",
+     [
+      "Kulrang-kumush",
+      "Серо-серебристый"
+     ]
+    ],
+    [
+     "117",
+     "45745bf0",
+     "jigarrang",
+     [
+      "Qo‘ng‘ir-oltin",
+      "Коричнево-золотой"
+     ]
+    ],
+    [
+     "118",
+     "05b63035",
+     "kulrang",
+     [
+      "Krem, to‘q kulrang",
+      "Крем, тёмно-серый"
+     ]
+    ],
+    [
+     "121",
+     "da26e664",
+     "kok",
+     [
+      "Krem, ko‘k-oltin",
+      "Крем, сине-золотой"
+     ]
+    ],
+    [
+     "124",
+     "8b48a4f1",
+     "krem",
+     [
+      "Krem-kulrang, oltin",
+      "Крем-серый, золото"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5853",
+   "code": "SNJ 5853",
+   "name": [
+    "Tosh",
+    "Камень"
+   ],
+   "sheet": "44f85022",
+   "items": [
+    [
+     "103",
+     "4838dbea",
+     "kulrang",
+     [
+      "Kulrang, oq tomirlar",
+      "Серый, белые прожилки"
+     ]
+    ],
+    [
+     "105",
+     "b4e79ca6",
+     "krem",
+     [
+      "Krem, oltin tomirlar",
+      "Крем, золотые прожилки"
+     ]
+    ],
+    [
+     "106",
+     "641092cb",
+     "jigarrang",
+     [
+      "Qo‘ng‘ir, oltin tomirlar",
+      "Коричневый, золотые прожилки"
+     ]
+    ],
+    [
+     "110",
+     "4c04b213",
+     "kulrang",
+     [
+      "To‘q kulrang, kumush tomirlar",
+      "Тёмно-серый, серебристые прожилки"
+     ]
+    ],
+    [
+     "112",
+     "fc41b648",
+     "kok",
+     [
+      "Ko‘k-kulrang, oltin",
+      "Сине-серый, золото"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5831",
+   "code": "SNJ 5831",
+   "name": [
+    "To‘qima",
+    "Плетение"
+   ],
+   "sheet": "6d728fc3",
+   "items": [
+    [
+     "113",
+     "39466972",
+     "kok",
+     [
+      "Ko‘k, oltin hoshiya",
+      "Синий, золотая кайма"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5835",
+   "code": "SNJ 5835",
+   "name": [
+    "Zig‘ir",
+    "Лён"
+   ],
+   "sheet": "e8699a44",
+   "items": [
+    [
+     "102",
+     "987df55a",
+     "krem",
+     [
+      "Bej, zig‘ir to‘qima",
+      "Беж, льняная фактура"
+     ]
+    ],
+    [
+     "104",
+     "0f8d09c7",
+     "kulrang",
+     [
+      "Och kulrang, zig‘ir",
+      "Светло-серый, лён"
+     ]
+    ],
+    [
+     "105",
+     "7a160523",
+     "kulrang",
+     [
+      "To‘q kulrang melanj",
+      "Тёмно-серый меланж"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5840",
+   "code": "SNJ 5840",
+   "name": [
+    "Ipak chiziq",
+    "Шёлковая нить"
+   ],
+   "sheet": "288ad8c6",
+   "items": [
+    [
+     "104",
+     "b28f6fa3",
+     "kulrang",
+     [
+      "Och kumush",
+      "Светлое серебро"
+     ]
+    ],
+    [
+     "105",
+     "ba2ce631",
+     "kulrang",
+     [
+      "Kulrang melanj",
+      "Серый меланж"
+     ]
+    ],
+    [
+     "106",
+     "3f634753",
+     "jigarrang",
+     [
+      "Qo‘ng‘ir-oltin",
+      "Коричнево-золотой"
+     ]
+    ],
+    [
+     "110",
+     "7ea6c16c",
+     "kulrang",
+     [
+      "Kumush-kulrang",
+      "Серебристо-серый"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5367",
+   "code": "SNJ 5367",
+   "name": [
+    "Klassik",
+    "Классика"
+   ],
+   "sheet": "2abf3b54",
+   "items": [
+    [
+     "104",
+     "2e3e434e",
+     "krem",
+     [
+      "Sutrang, silliq",
+      "Молочный, гладкий"
+     ]
+    ],
+    [
+     "152",
+     "71124ad6",
+     "oq",
+     [
+      "Oq-kulrang, silliq",
+      "Бело-серый, гладкий"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5372",
+   "code": "SNJ 5372",
+   "name": [
+    "Melanj",
+    "Меланж"
+   ],
+   "sheet": "ee0eeece",
+   "items": [
+    [
+     "107",
+     "8bfda48a",
+     "kulrang",
+     [
+      "Kulrang melanj",
+      "Серый меланж"
+     ]
+    ],
+    [
+     "109",
+     "ca612992",
+     "kulrang",
+     [
+      "Kulrang, silliq",
+      "Серый, гладкий"
+     ]
+    ],
+    [
+     "113",
+     "357ea183",
+     "jigarrang",
+     [
+      "Karamel-qo‘ng‘ir",
+      "Карамельно-коричневый"
+     ]
+    ],
+    [
+     "114",
+     "575458ae",
+     "kulrang",
+     [
+      "Grafit",
+      "Графит"
+     ]
+    ],
+    [
+     "120",
+     "8532bad5",
+     "oq",
+     [
+      "Oq-kumush",
+      "Бело-серебристый"
+     ]
+    ],
+    [
+     "125",
+     "dbf2e756",
+     "krem",
+     [
+      "Bej",
+      "Бежевый"
+     ]
+    ],
+    [
+     "132",
+     "12ed5227",
+     "kulrang",
+     [
+      "Och kulrang melanj",
+      "Светло-серый меланж"
+     ]
+    ],
+    [
+     "138",
+     "8d00a64f",
+     "oq",
+     [
+      "Sutrang",
+      "Молочный"
+     ]
+    ],
+    [
+     "146",
+     "02b0fbb9",
+     "kok",
+     [
+      "Ko‘k-kulrang",
+      "Сине-серый"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5670",
+   "code": "SNJ 5670",
+   "name": [
+    "Yaltiroq chiziq",
+    "Блестящая полоса"
+   ],
+   "sheet": "a8de0830",
+   "items": [
+    [
+     "103",
+     "bb36ff26",
+     "krem",
+     [
+      "Krem, yaltiroq chiziqlar",
+      "Крем, блестящие полосы"
+     ]
+    ],
+    [
+     "105",
+     "766b3cbb",
+     "kulrang",
+     [
+      "Kulrang, yaltiroq chiziqlar",
+      "Серый, блестящие полосы"
+     ]
+    ],
+    [
+     "106",
+     "d8a705c9",
+     "kulrang",
+     [
+      "Och kulrang, yaltiroq",
+      "Светло-серый, блестящий"
+     ]
+    ],
+    [
+     "115",
+     "34a05782",
+     "krem",
+     [
+      "Bej-krem, yaltiroq",
+      "Беж-крем, блестящий"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5909",
+   "code": "SNJ 5909",
+   "name": [
+    "Abstrakt",
+    "Абстракция"
+   ],
+   "sheet": "3ef14497",
+   "items": [
+    [
+     "104",
+     "c9dbeeea",
+     "kulrang",
+     [
+      "Kulrang, qora-oltin chiziqlar",
+      "Серый, чёрно-золотые штрихи"
+     ]
+    ],
+    [
+     "105",
+     "6d7ae9d2",
+     "jigarrang",
+     [
+      "Qo‘ng‘ir, oq chiziqlar",
+      "Коричневый, белые штрихи"
+     ]
+    ],
+    [
+     "108",
+     "e5009eae",
+     "krem",
+     [
+      "Krem, oltin chiziqlar",
+      "Крем, золотые штрихи"
+     ]
+    ],
+    [
+     "114",
+     "099e9c57",
+     "kok",
+     [
+      "Ko‘k, oltin chiziqlar",
+      "Синий, золотые штрихи"
+     ]
+    ],
+    [
+     "117",
+     "8242f05b",
+     "kulrang",
+     [
+      "Oq-kulrang, oltin",
+      "Бело-серый, золото"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5872",
+   "code": "SNJ 5872",
+   "name": [
+    "Chiziq va naqsh",
+    "Полоса и узор"
+   ],
+   "sheet": "44387a6b",
+   "items": [
+    [
+     "103",
+     "bc3e9533",
+     "kulrang",
+     [
+      "Kulrang",
+      "Серый"
+     ]
+    ],
+    [
+     "108",
+     "6ff05af6",
+     "krem",
+     [
+      "Krem-oltin",
+      "Крем-золото"
+     ]
+    ],
+    [
+     "110",
+     "9d365b5d",
+     "kok",
+     [
+      "Ko‘k-kulrang",
+      "Сине-серый"
+     ]
+    ],
+    [
+     "111",
+     "09471cff",
+     "jigarrang",
+     [
+      "Bej, qo‘ng‘ir chiziq",
+      "Беж, коричневая полоса"
+     ]
+    ],
+    [
+     "117",
+     "416c5902",
+     "oq",
+     [
+      "Oq-kulrang",
+      "Бело-серый"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "snj5910",
+   "code": "SNJ 5910",
+   "name": [
+    "Lola naqsh",
+    "Тюльпан"
+   ],
+   "sheet": "42ceda9f",
+   "items": [
+    [
+     "103",
+     "cfe429b4",
+     "kulrang",
+     [
+      "Kulrang-kumush",
+      "Серо-серебристый"
+     ]
+    ],
+    [
+     "104",
+     "c2cf10b5",
+     "kulrang",
+     [
+      "Kulrang, oltin naqsh",
+      "Серый, золотой узор"
+     ]
+    ],
+    [
+     "105",
+     "afef7b47",
+     "jigarrang",
+     [
+      "Bej-qo‘ng‘ir",
+      "Беж-коричневый"
+     ]
+    ],
+    [
+     "106",
+     "dfa3be2f",
+     "kok",
+     [
+      "Ko‘k",
+      "Голубой"
+     ]
+    ]
+   ]
+  }
+ ]
+}

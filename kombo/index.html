@@ -1,25 +1,351 @@
 <!doctype html>
-<html lang="uz"><head><meta charset="utf-8">
+<html lang="uz-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kombo katalogi — Imperial Jalyuzi</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex">
+<meta name="description" content="Imperial Jalyuzi kombo (kun-tun) matolari katalogi: rang bo‘yicha tanlang va Telegram yoki Instagram orqali yuboring. Toshkentda o‘lchov va o‘rnatish bepul.">
+<meta property="og:title" content="Kombo katalogi — Imperial Jalyuzi">
+<meta property="og:description" content="Kombo (kun-tun) matolarini ko‘ring, yoqqanini belgilang va bizga yuboring.">
+<meta property="og:image" content="https://imperial-jalyuzi.github.io/kombo/img/snj5716/tayyor_102.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#141311">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#14110e;--paper:#f5f1e9;--gold:#d6b062;--mute:#b9b1a3}
-*{box-sizing:border-box}body{margin:0;min-height:100svh;background:var(--bg);color:var(--paper);font:17px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;display:grid;place-items:center;padding:32px 16px}
-main{max-width:420px;width:100%;text-align:center}
-img{width:120px;height:auto;margin-bottom:28px}
-.k{font:600 12px/1 ui-monospace,monospace;letter-spacing:.22em;color:var(--gold)}
-h1{font-weight:600;font-size:30px;line-height:1.15;margin:14px 0 10px}
-p{color:var(--mute);margin:0 0 28px}
-a.b{display:block;padding:15px;border-radius:12px;text-decoration:none;font-weight:600;margin-top:10px}
-.t{background:var(--gold);color:#1e1c19}.i{border:1px solid #3a342c;color:var(--paper)}
-small{display:block;margin-top:26px;color:#8d8578}
-</style></head><body><main>
-<img src="logo.png" alt="Imperial Jalyuzi">
-<div class="k">IMPERIAL · KOMBO</div>
-<h1>Kombo matolari katalogi tayyorlanmoqda</h1>
-<p>Каталог тканей зебра скоро будет здесь. Hozircha ranglarni so‘rang — rasmlarini yuboramiz.</p>
-<a class="b t" href="https://t.me/jalyuzi_imperial">Telegram’da yozish</a>
-<a class="b i" href="https://ig.me/m/imperial_jalyuzi_uz">Instagram Direkt</a>
-<small>Toshkentda o‘lchov va o‘rnatish bepul · 1 yil kafolat</small>
-</main></body></html>
+:root { --bg:#141311; --card:#1C1A17; --ink:#F5F1E9; --soft:#CFC8BB; --muted:#A9A294; --gold:#D6B062; --gold-hi:#E8C97F; --line:#3A352C; --line2:#2A2620; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); }
+body { font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+button { font: inherit; color: inherit; }
+a { color: inherit; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: calc(env(safe-area-inset-top,0px) + 16px) 16px 140px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.top img { height: 34px; width: auto; display: block; }
+.lang { display: flex; border: 1px solid #4A4438; border-radius: 999px; overflow: hidden; flex: none; }
+.lang button { background: transparent; color: var(--soft); border: 0; font-weight: 600; font-size: 12px; padding: 0 12px; min-width: 46px; min-height: 34px; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--gold); color: var(--bg); }
+header.hero { padding: 34px 0 18px; }
+.k { font-size: 11px; letter-spacing: .24em; color: var(--gold); font-weight: 500; }
+h1 { font-family: Caladea, Georgia, serif; font-weight: 400; font-size: clamp(32px, 7vw, 52px); line-height: 1.05; margin: 12px 0 12px; }
+h1 em { color: var(--gold); }
+.lead { color: var(--soft); font-size: 15px; line-height: 1.55; margin: 0; max-width: 560px; }
+.steps { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 18px 0 0; padding: 0; list-style: none; font-size: 13px; color: var(--muted); }
+.steps b { color: var(--gold); font-weight: 600; margin-right: 6px; }
+.filters { position: sticky; top: 0; z-index: 5; background: linear-gradient(var(--bg) 78%, rgba(20,19,17,0)); padding: 12px 0 16px; margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
+.chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.chips::-webkit-scrollbar { display: none; }
+.chip { flex: none; display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 0 14px; min-height: 38px; font-size: 13.5px; cursor: pointer; white-space: nowrap; }
+.chip i { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); }
+.chip[aria-pressed="true"] { border-color: var(--gold); background: rgba(214,176,98,.12); color: var(--gold-hi); }
+.col { margin-top: 26px; }
+.colhead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line2); padding-top: 16px; margin-bottom: 14px; }
+.colhead h2 { margin: 0; font-family: Caladea, Georgia, serif; font-weight: 400; font-size: 26px; }
+.colhead h2 span { display: block; font-family: Inter, sans-serif; font-size: 11px; letter-spacing: .2em; color: var(--muted); margin-bottom: 4px; }
+.sheetbtn { flex: none; background: transparent; border: 1px solid var(--line); border-radius: 10px; min-height: 38px; padding: 0 12px; font-size: 13px; color: var(--soft); cursor: pointer; }
+.sheetbtn:hover, .sheetbtn:focus-visible { border-color: var(--gold); color: var(--ink); }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+@media (min-width: 640px) { .grid { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; } }
+@media (min-width: 900px) { .grid { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+.card { position: relative; background: var(--card); border: 1px solid var(--line2); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+.card.sel { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+.card .ph { position: relative; display: block; width: 100%; border: 0; padding: 0; background: #222; cursor: zoom-in; aspect-ratio: 4 / 5; }
+.card .ph img.t { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block; }
+.card .ph img.m { position: absolute; left: 8px; bottom: 8px; width: 34%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 2px solid var(--bg); box-shadow: 0 4px 14px rgba(0,0,0,.45); }
+.card .info { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 3px; flex: 1; }
+.card .code { font-weight: 600; font-size: 14px; letter-spacing: .02em; }
+.card .d { font-size: 12.5px; color: var(--muted); line-height: 1.35; }
+.pick { position: absolute; top: 8px; right: 8px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(20,19,17,.72); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); display: grid; place-items: center; cursor: pointer; }
+.pick svg { width: 20px; height: 20px; }
+.pick path { fill: none; stroke: #fff; stroke-width: 1.8; }
+.sel .pick { background: var(--gold); }
+.sel .pick path { fill: var(--bg); stroke: var(--bg); }
+.empty { color: var(--muted); padding: 40px 0; text-align: center; }
+.facts { margin-top: 40px; border-top: 1px solid var(--line2); padding-top: 22px; display: grid; gap: 10px; font-size: 14px; color: var(--soft); }
+.facts p { margin: 0; }
+.facts a { color: var(--gold); text-decoration: none; }
+/* bottom bar */
+.bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: rgba(20,19,17,.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--line); padding: 12px 16px calc(env(safe-area-inset-bottom,0px) + 12px); transform: translateY(110%); transition: transform .25s ease; }
+.bar.on { transform: none; }
+.bar .in { max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+.bar .row { display: flex; align-items: center; gap: 10px; }
+.thumbs { display: flex; gap: 6px; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.thumbs img { width: 36px; height: 36px; border-radius: 8px; object-fit: cover; flex: none; border: 1px solid var(--line); }
+.cnt { font-size: 13px; color: var(--soft); white-space: nowrap; }
+.clr { background: none; border: 0; color: var(--muted); font-size: 13px; text-decoration: underline; cursor: pointer; padding: 6px; }
+.send { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.send a, .send button { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 14.5px; cursor: pointer; }
+.send .tg { background: var(--gold); color: var(--bg); border: 0; }
+.send .tg:hover { background: var(--gold-hi); }
+.send .ig { border: 1px solid var(--line); background: transparent; color: var(--ink); }
+.send .ig:hover { border-color: var(--gold); }
+/* viewer */
+dialog { border: 0; padding: 0; background: var(--bg); color: var(--ink); max-width: 100vw; max-height: 100dvh; width: 100%; height: 100%; }
+dialog::backdrop { background: rgba(8,7,6,.92); }
+.vw { height: 100%; display: flex; flex-direction: column; padding: calc(env(safe-area-inset-top,0px) + 10px) 12px calc(env(safe-area-inset-bottom,0px) + 12px); gap: 10px; max-width: 760px; margin: 0 auto; }
+.vw .hd { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.vw .hd b { font-size: 16px; }
+.vw .hd small { display: block; color: var(--muted); font-size: 12.5px; font-weight: 400; }
+.x { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: transparent; cursor: pointer; font-size: 22px; line-height: 1; flex: none; }
+.vw .img { flex: 1; min-height: 0; display: grid; place-items: center; position: relative; }
+.vw .img img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; }
+.nav { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(20,19,17,.7); cursor: pointer; font-size: 22px; }
+.nav.p { left: 4px; } .nav.n { right: 4px; }
+.tabs { display: flex; gap: 6px; justify-content: center; }
+.tabs button { border: 1px solid var(--line); background: transparent; border-radius: 999px; min-height: 36px; padding: 0 14px; font-size: 13px; cursor: pointer; color: var(--soft); }
+.tabs button[aria-pressed="true"] { border-color: var(--gold); color: var(--gold-hi); }
+.vpick { min-height: 50px; border-radius: 12px; border: 0; background: var(--gold); color: var(--bg); font-weight: 600; font-size: 15px; cursor: pointer; }
+.vpick.on { background: transparent; border: 1px solid var(--gold); color: var(--gold-hi); }
+.toast { position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom,0px) + 150px); transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 12px 16px; border-radius: 12px; font-size: 14px; z-index: 50; max-width: calc(100vw - 32px); text-align: center; opacity: 0; pointer-events: none; transition: opacity .2s; }
+.toast.on { opacity: 1; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .bar, .toast { transition: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <a href="https://shamsiddinyusupov.github.io/imperial/" aria-label="Imperial Jalyuzi"><img src="logo.png" alt="Imperial Jalyuzi" width="477" height="153"></a>
+    <div class="lang" role="group" aria-label="Til / Язык">
+      <button type="button" data-lang="uz" aria-pressed="true">UZ</button>
+      <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="k" data-t="kick">IMPERIAL · KOMBO (KUN-TUN)</div>
+    <h1 data-t-html="h1">Matoni tanlang —<br><em>derazangizga o‘lchab tikamiz</em></h1>
+    <p class="lead" data-t="lead">Har bir mato tayyor jalyuzi ko‘rinishida. Yoqqanini ♡ bilan belgilang va bizga yuboring — o‘lchovga kelib, aniq narxini aytamiz.</p>
+    <ul class="steps">
+      <li><b>1</b><span data-t="s1">Rangni tanlang</span></li>
+      <li><b>2</b><span data-t="s2">Yoqqanini ♡ belgilang</span></li>
+      <li><b>3</b><span data-t="s3">Telegram yoki Direktga yuboring</span></li>
+    </ul>
+  </header>
+
+  <div class="filters"><div class="chips" id="chips" role="group" aria-label="Rang"></div></div>
+  <main id="list"></main>
+
+  <section class="facts">
+    <p data-t="f1">Toshkent shahrida o‘lchov, yetkazish va o‘rnatish — bepul.</p>
+    <p data-t="f2">O‘lchovdan keyin 3 kunda tayyor · 1 yil kafolat · Click, Payme, karta yoki naqd.</p>
+    <p><a href="tel:+998337511188">+998 33 751 11 88</a> · <a href="https://t.me/jalyuzi_imperial">Telegram</a> · <a href="https://www.instagram.com/imperial_jalyuzi_uz/">Instagram</a></p>
+    <p style="color:var(--muted);font-size:12.5px" data-t="f3">Rasmdagi rang ekranga qarab biroz farq qilishi mumkin — o‘lchovchi asl namunalarni olib keladi.</p>
+  </section>
+</div>
+
+<div class="bar" id="bar" aria-live="polite">
+  <div class="in">
+    <div class="row"><div class="thumbs" id="thumbs"></div><span class="cnt" id="cnt"></span><button type="button" class="clr" id="clr" data-t="clear">Tozalash</button></div>
+    <div class="send">
+      <a class="tg" id="tg" href="#" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.8 19c-.2 1-.8 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.7 8.6-7.8c.4-.3-.1-.5-.6-.2L6.9 13 2.4 11.6c-1-.3-1-1 .2-1.5L20.5 3.2c.8-.3 1.6.2 1.4 1.1Z"/></svg><span data-t="tg">Telegram’da yuborish</span></a>
+      <button type="button" class="ig" id="ig"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></svg><span data-t="ig">Direktga yozish</span></button>
+    </div>
+  </div>
+</div>
+
+<dialog id="dlg" aria-label="Mato">
+  <div class="vw">
+    <div class="hd"><b id="vtitle"></b><button type="button" class="x" id="vclose" aria-label="Yopish">×</button></div>
+    <div class="tabs" role="group">
+      <button type="button" data-v="t" aria-pressed="true" data-t="v_t">Tayyor ko‘rinish</button>
+      <button type="button" data-v="m" aria-pressed="false" data-t="v_m">Mato yaqindan</button>
+      <button type="button" data-v="s" aria-pressed="false" data-t="v_s">Kolleksiya</button>
+    </div>
+    <div class="img"><img id="vimg" alt=""><button type="button" class="nav p" id="vprev" aria-label="Oldingi">‹</button><button type="button" class="nav n" id="vnext" aria-label="Keyingi">›</button></div>
+    <button type="button" class="vpick" id="vpick"></button>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="data.js"></script>
+<script>
+(() => {
+  const K = window.KATALOG;
+  const TG = "https://t.me/jalyuzi_imperial";
+  const IG = "https://ig.me/m/imperial_jalyuzi_uz";
+  const T = {
+    uz: {
+      kick: "IMPERIAL · KOMBO (KUN-TUN)",
+      h1: "Matoni tanlang —<br><em>derazangizga o‘lchab tikamiz</em>",
+      lead: "Har bir mato tayyor jalyuzi ko‘rinishida. Yoqqanini ♡ bilan belgilang va bizga yuboring — o‘lchovga kelib, aniq narxini aytamiz.",
+      s1: "Rangni tanlang", s2: "Yoqqanini ♡ belgilang", s3: "Telegram yoki Direktga yuboring",
+      all: "Hammasi", sheet: "Namunalar", clear: "Tozalash",
+      tg: "Telegram’da yuborish", ig: "Direktga yozish",
+      v_t: "Tayyor ko‘rinish", v_m: "Mato yaqindan", v_s: "Kolleksiya",
+      add: "♡ Tanlash", added: "✓ Tanlandi", n: n => n + " ta tanlandi", none: "Bu rangda mato yo‘q.",
+      f1: "Toshkent shahrida o‘lchov, yetkazish va o‘rnatish — bepul.",
+      f2: "O‘lchovdan keyin 3 kunda tayyor · 1 yil kafolat · Click, Payme, karta yoki naqd.",
+      f3: "Rasmdagi rang ekranga qarab biroz farq qilishi mumkin — o‘lchovchi asl namunalarni olib keladi.",
+      msg: c => "Assalomu alaykum! Kombo katalogidan tanladim: " + c + ". O‘lchovga kelishingizni istayman.",
+      copied: "Xabar nusxalandi — Direktda «Joylash»ni bosing.",
+      copyfail: "Direktda tanlangan kodlarni yozing: ",
+      pick: "tanlash", unpick: "tanlovdan olish"
+    },
+    ru: {
+      kick: "IMPERIAL · ЗЕБРА «ДЕНЬ-НОЧЬ»",
+      h1: "Выберите ткань —<br><em>сошьём по размеру окна</em>",
+      lead: "Каждая ткань — в виде готовых жалюзи. Отметьте понравившиеся ♡ и отправьте нам: приедем на замер и назовём точную цену.",
+      s1: "Выберите цвет", s2: "Отметьте ♡", s3: "Отправьте в Telegram или Директ",
+      all: "Все", sheet: "Образцы", clear: "Очистить",
+      tg: "Отправить в Telegram", ig: "Написать в Директ",
+      v_t: "Готовый вид", v_m: "Ткань крупно", v_s: "Коллекция",
+      add: "♡ Выбрать", added: "✓ Выбрано", n: n => "Выбрано: " + n, none: "Тканей такого цвета нет.",
+      f1: "По Ташкенту замер, доставка и установка — бесплатно.",
+      f2: "Готово через 3 дня после замера · гарантия 1 год · Click, Payme, карта или наличные.",
+      f3: "Цвет на фото может немного отличаться от экрана — замерщик привезёт настоящие образцы.",
+      msg: c => "Здравствуйте! Выбрал(а) в каталоге зебра: " + c + ". Хочу записаться на замер.",
+      copied: "Сообщение скопировано — вставьте его в Директ.",
+      copyfail: "Напишите в Директ выбранные коды: ",
+      pick: "выбрать", unpick: "убрать из выбора"
+    }
+  };
+  const SW = { oq: "#F2EFE8", krem: "#D9C9A8", kulrang: "#9A9A98", jigarrang: "#7A6248", kok: "#4E7C86" };
+  const get = (k, d) => { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } };
+  const put = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+
+  const items = [];
+  K.collections.forEach(c => c.items.forEach(it => items.push({ ...it, col: c, key: c.code.replace("SNJ ", "") + "-" + it.code,
+    t: `img/${c.id}/tayyor_${it.code}.jpg`, m: `img/${c.id}/mato_${it.code}.jpg`, s: `img/${c.id}/namuna.jpg` })));
+  const byKey = Object.fromEntries(items.map(i => [i.key, i]));
+  let lang = new URLSearchParams(location.search).get("lang") || get("kombo_lang", "uz");
+  if (!T[lang]) lang = "uz";
+  let color = "all";
+  let sel = get("kombo_sel", []).filter(k => byKey[k]);
+  const $ = id => document.getElementById(id);
+  const L = () => T[lang];
+  const li = (arr) => arr[lang === "ru" ? 1 : 0];
+
+  function chips() {
+    const cs = ["all", ...Object.keys(K.colors)];
+    $("chips").innerHTML = "";
+    cs.forEach(c => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "chip"; b.setAttribute("aria-pressed", String(c === color));
+      if (c !== "all") { const i = document.createElement("i"); i.style.background = SW[c]; b.append(i); }
+      const n = c === "all" ? items.length : items.filter(x => x.tag === c).length;
+      b.append((c === "all" ? L().all : li(K.colors[c])) + " · " + n);
+      b.onclick = () => { color = c; chips(); list(); };
+      $("chips").append(b);
+    });
+  }
+
+  function card(it) {
+    const el = document.createElement("article");
+    el.className = "card" + (sel.includes(it.key) ? " sel" : "");
+    el.dataset.key = it.key;
+    const ph = document.createElement("button");
+    ph.type = "button"; ph.className = "ph"; ph.setAttribute("aria-label", it.col.code + "-" + it.code);
+    ph.innerHTML = `<img class="t" loading="lazy" decoding="async" alt="" src="${it.t}"><img class="m" loading="lazy" decoding="async" alt="" src="${it.m}">`;
+    ph.onclick = () => openV(it.key, "t");
+    const pk = document.createElement("button");
+    pk.type = "button"; pk.className = "pick";
+    pk.setAttribute("aria-pressed", String(sel.includes(it.key)));
+    pk.setAttribute("aria-label", it.key + " — " + (sel.includes(it.key) ? L().unpick : L().pick));
+    pk.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3s-7.6-4.6-7.6-10.2A4.3 4.3 0 0 1 12 7.4a4.3 4.3 0 0 1 7.6 2.7c0 5.6-7.6 10.2-7.6 10.2Z"/></svg>';
+    pk.onclick = () => toggle(it.key);
+    const info = document.createElement("div");
+    info.className = "info";
+    const code = document.createElement("span"); code.className = "code"; code.textContent = it.col.code + "-" + it.code;
+    const d = document.createElement("span"); d.className = "d"; d.textContent = li(it.d);
+    info.append(code, d);
+    el.append(ph, pk, info);
+    return el;
+  }
+
+  function list() {
+    const root = $("list"); root.innerHTML = "";
+    let any = false;
+    K.collections.forEach(c => {
+      const its = items.filter(i => i.col === c && (color === "all" || i.tag === color));
+      if (!its.length) return;
+      any = true;
+      const s = document.createElement("section"); s.className = "col";
+      const h = document.createElement("div"); h.className = "colhead";
+      const h2 = document.createElement("h2");
+      const sp = document.createElement("span"); sp.textContent = c.code;
+      h2.append(sp, li(c.name));
+      const sb = document.createElement("button"); sb.type = "button"; sb.className = "sheetbtn"; sb.textContent = L().sheet;
+      sb.onclick = () => openV(its[0].key, "s");
+      h.append(h2, sb);
+      const g = document.createElement("div"); g.className = "grid";
+      its.forEach(it => g.append(card(it)));
+      s.append(h, g); root.append(s);
+    });
+    if (!any) { const p = document.createElement("p"); p.className = "empty"; p.textContent = L().none; root.append(p); }
+  }
+
+  function toggle(k) {
+    sel = sel.includes(k) ? sel.filter(x => x !== k) : [...sel, k];
+    put("kombo_sel", sel);
+    document.querySelectorAll(`.card[data-key="${k}"]`).forEach(el => {
+      const on = sel.includes(k);
+      el.classList.toggle("sel", on);
+      const b = el.querySelector(".pick");
+      b.setAttribute("aria-pressed", String(on));
+      b.setAttribute("aria-label", k + " — " + (on ? L().unpick : L().pick));
+    });
+    bar(); if ($("dlg").open) vpick();
+  }
+
+  function codes() { return sel.map(k => "SNJ " + k).join(", "); }
+  function bar() {
+    $("bar").classList.toggle("on", sel.length > 0);
+    $("cnt").textContent = L().n(sel.length);
+    $("thumbs").innerHTML = "";
+    sel.forEach(k => { const i = document.createElement("img"); i.src = byKey[k].m; i.alt = k; $("thumbs").append(i); });
+    $("tg").href = TG + "?text=" + encodeURIComponent(L().msg(codes()));
+  }
+  $("clr").onclick = () => { const old = sel; sel = []; put("kombo_sel", sel); old.forEach(k => document.querySelectorAll(`.card[data-key="${k}"]`).forEach(el => { el.classList.remove("sel"); el.querySelector(".pick").setAttribute("aria-pressed", "false"); })); bar(); };
+  $("ig").onclick = async () => {
+    const m = L().msg(codes());
+    let ok = false;
+    try { await navigator.clipboard.writeText(m); ok = true; } catch (e) {}
+    toast(ok ? L().copied : L().copyfail + codes());
+    setTimeout(() => { location.href = IG; }, ok ? 900 : 2600);
+  };
+  let tt;
+  function toast(s) { const t = $("toast"); t.textContent = s; t.classList.add("on"); clearTimeout(tt); tt = setTimeout(() => t.classList.remove("on"), 3200); }
+
+  // viewer
+  let vk = null, vv = "t";
+  function visible() { return items.filter(i => color === "all" || i.tag === color); }
+  function openV(k, v) { vk = k; vv = v; render(); if (!$("dlg").open) $("dlg").showModal(); }
+  function render() {
+    const it = byKey[vk];
+    $("vtitle").innerHTML = "";
+    $("vtitle").append(it.col.code + "-" + it.code);
+    const sm = document.createElement("small"); sm.textContent = li(it.col.name) + " · " + li(it.d); $("vtitle").append(sm);
+    $("vimg").src = it[vv]; $("vimg").alt = it.key;
+    document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === vv)));
+    vpick();
+  }
+  function vpick() { const on = sel.includes(vk); $("vpick").textContent = on ? L().added : L().add; $("vpick").classList.toggle("on", on); }
+  function step(d) { const v = visible(); let i = v.findIndex(x => x.key === vk); if (i < 0) i = 0; vk = v[(i + d + v.length) % v.length].key; render(); }
+  document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => { vv = b.dataset.v; render(); });
+  $("vpick").onclick = () => toggle(vk);
+  $("vclose").onclick = () => $("dlg").close();
+  $("vprev").onclick = () => step(-1);
+  $("vnext").onclick = () => step(1);
+  $("dlg").addEventListener("click", e => { if (e.target.classList.contains("vw") || e.target.classList.contains("img")) $("dlg").close(); });
+  document.addEventListener("keydown", e => { if (!$("dlg").open) return; if (e.key === "ArrowLeft") step(-1); if (e.key === "ArrowRight") step(1); });
+  let sx = null;
+  $("vimg").addEventListener("touchstart", e => { sx = e.touches[0].clientX; }, { passive: true });
+  $("vimg").addEventListener("touchend", e => { if (sx === null) return; const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1); sx = null; });
+
+  function setLang(l) {
+    lang = l; put("kombo_lang", l);
+    document.documentElement.lang = l === "ru" ? "ru" : "uz-Latn";
+    document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === l)));
+    document.querySelectorAll("[data-t]").forEach(el => { const v = L()[el.dataset.t]; if (typeof v === "string") el.textContent = v; });
+    document.querySelectorAll("[data-t-html]").forEach(el => { el.innerHTML = L()[el.dataset.tHtml]; });
+    chips(); list(); bar(); if ($("dlg").open) render();
+  }
+  document.querySelectorAll(".lang button").forEach(b => b.onclick = () => setLang(b.dataset.lang));
+  setLang(lang);
+})();
+</script>
+</body>
+</html>
